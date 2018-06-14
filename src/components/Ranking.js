@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Card, { CardMedia, CardContent, CardActions } from 'material-ui/Card';
+import Typography from 'material-ui/Typography';
+import Button from 'material-ui/Button';
 
 export default class Ranking extends React.Component {
 	// componentWillMount, componentWillReceiveProps
@@ -32,6 +35,24 @@ export default class Ranking extends React.Component {
 						// リクエスト完了前
 						return <p>読み込み中...</p>;
 					} else {
+						return ranking.map((item, i) => (
+							<Card
+								key={`ranking-item-${item.code}`}
+								style={{maxWidth: '500px', margin: '32px auto'}}
+							>
+								<CardMedia
+									image={item.imageUrl}
+									title={`${i + 1}位 ${item.name}`}
+									style={{height: '200px'}}
+								/>
+								<CardContent>
+									<Typography type="title">
+										{`${i + 1}位 ${item.name}`}
+									</Typography>
+								</CardContent>
+							</Card>
+						));
+
 						return (
 							<ol>
 								{ranking.map(item => (
