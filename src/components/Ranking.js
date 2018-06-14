@@ -50,19 +50,16 @@ export default class Ranking extends React.Component {
 										{`${i + 1}位 ${item.name}`}
 									</Typography>
 								</CardContent>
+								<CardActions>
+									<Button
+										raised
+										color="secondary"
+										fullWidth
+										href={item.url}
+									>商品ページへ</Button>
+								</CardActions>
 							</Card>
 						));
-
-						return (
-							<ol>
-								{ranking.map(item => (
-									<li key={`ranking-item-${item.code}`}>
-										<img alt={item.name} src={item.imageUrl} />
-										<a href={item.url} target="_blank">{item.name}</a>
-									</li>
-								))}
-							</ol>
-						);
 					}
 				})()}
 			</div>
