@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
-import createBrowserHistory from 'history/createBrowserHistory';
+// import createBrowserHistory from 'history/createBrowserHistory';
+import createHistory from 'history/createHashHistory';
 import App from './App';
 import createStore from './createStore';
 
 // historyのインスンタンスを生成
-const history = createBrowserHistory();
+const history = createHistory();
 
 // Storeの生成
 const store = createStore(history);
