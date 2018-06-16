@@ -2,6 +2,6 @@
 
 exports[`HelloWorldコンポーネントのスナップショットテスト 1`] = `
 <div>
-  Hello World!
+  Hello React!
 </div>
 `;
