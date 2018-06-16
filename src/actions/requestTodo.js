@@ -1,4 +1,4 @@
-import 'ismorphic-fetch';
+import 'isomorphic-fetch';
 
 const fetchTodosRequest = () => ({
 	type: 'FETCH_TODOS_REQUEST',
